@@ -1,0 +1,204 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SliderItems from "../components/Home/SliderItems";
+import RouteItems from "../components/Home/RouteItems";
+import MedSliderItems from "../components/Home/MedSliderItems";
+import ChooseItems from "../components/Home/ChooseItems";
+import TripSliderItems from "../components/Home/TripSliderItems";
+---
+
+<Layout title="TLC Nursing">
+  <div class="main_banner">
+    <div class="swiper banner">
+      <div class="swiper-wrapper">
+        <SliderItems />
+      </div>
+      <div class="banner-swiper-pagination"></div>
+    </div>
+  </div>
+  <div class="mission">
+    <div class="wrapper">
+      <h2>Our Mission</h2>
+      <p>
+        Cultivating meaningful relationships by bringing the best people
+        together through providing qualified healthcare professionals to support
+        your unique staffing needs.
+      </p>
+
+      <div class="stats">
+        <div class="item">
+          <strong>17</strong>
+          <span>Years of Experience</span>
+        </div>
+        <div class="item">
+          <strong>10978</strong>
+          <span>Happy Nurses</span>
+        </div>
+        <div class="item">
+          <strong>55</strong>
+          <span>Awards & Recognition</span>
+        </div>
+        <div class="item">
+          <strong>20107</strong>
+          <span>Trawel Contracts Completed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="joblist">
+    <div class="wrapper">
+      <div class="content">
+        <h2>
+          Travel Healthcare Jobs Available For All Healthcare Professionals!
+          Select Your Profession
+        </h2>
+        <div class="routes">
+          <RouteItems />
+        </div>
+      </div>
+      <img src="/res/doctors.jpg" alt="" />
+
+      <div class="action">
+        <a href="/" class="button"> All open jobs</a>
+      </div>
+    </div>
+  </div>
+  <div class="alert">
+    <div class="wrapper">
+      <div>
+        <h3>Best Travel Nursing Jobs In USA</h3>
+        <span>Certified by The Joint Commission</span>
+      </div>
+      <img src="/res/coin.png" alt="" />
+    </div>
+  </div>
+  <div class="about">
+    <div class="wrapper">
+      <div class="upheader">
+        <span>About our advantages</span>
+        <h2>
+          TLC Nursing offers the best pay package in the travel healthcare
+          industry
+        </h2>
+        <p>
+          Our pay package leads the industry. We'll match any competitive pay
+          offers!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="about_items">
+    <div class="swiper medpath">
+      <div class="swiper-wrapper">
+        <MedSliderItems />
+      </div>
+    </div>
+  </div>
+  <div class="choose">
+    <div class="wrapper">
+      <h2>Why Choose TLC Nursing</h2>
+      <div class="items">
+        <ChooseItems />
+      </div>
+      <div class="action">
+        <a href="/" class="button">Read more about Us</a>
+      </div>
+    </div>
+  </div>
+  <div class="ctaction">
+    <div class="wrapper">
+      <h2>Travel with TLC Nursing? One Click, endless possibilities!</h2>
+      <img src="/res/steps.jpg" alt="" />
+      <div class="content">
+        <p>
+          Leading the way in travel nursing, we simplify your career journey.
+          Get top opportunities, advanced tools, and unwavering support with us.
+          Joining TLC Nursing? <br /><strong>Easy as ABC:</strong>
+        </p>
+
+        <ul>
+          <li>
+            <div class="icon">
+              <span class="iconify" data-icon="uil:arrow-right"></span>
+            </div>
+            <span>Sign Up: Register and enrich your profile.</span>
+          </li>
+          <li>
+            <div class="icon">
+              <span class="iconify" data-icon="uil:arrow-right"></span>
+            </div>
+            <span>Discover: Log in, explore jobs, and view pay details.</span>
+          </li>
+          <li>
+            <div class="icon">
+              <span class="iconify" data-icon="uil:arrow-right"></span>
+            </div>
+            <span
+              >Apply Now: Found the right job? Click to connect with our
+              recruiter.</span
+            >
+          </li>
+        </ul>
+
+        <a href="/" class="button">See the difference</a>
+      </div>
+    </div>
+  </div>
+  <div class="trips">
+    <div class="wrapper">
+      <h2>Choose where you want to go next job trip</h2>
+      <div class="search">
+        <input type="text" placeholder="Search for articles" />
+        <div class="actions">
+          <span><span class="iconify" data-icon="uil:angle-down"></span></span>
+          <span><span class="iconify" data-icon="uil:search"></span></span>
+        </div>
+      </div>
+
+      <div class="trips_wrapper">
+        <div class="swiper tripsSlider">
+          <div class="swiper-wrapper">
+            <TripSliderItems />
+          </div>
+        </div>
+        <button class="trips-swiper-button-prev">
+          <span class="iconify" data-icon="bi:chevron-left"></span>
+        </button>
+        <button class="trips-swiper-button-next">
+          <span class="iconify" data-icon="bi:chevron-right"></span>
+        </button>
+      </div>
+      <div class="action">
+        <a href="/" class="button">Search travel jobs</a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script is:inline>
+new Swiper(".banner", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  speed: 750,
+  pagination: {
+    el: ".banner-swiper-pagination",
+  },
+});
+
+new Swiper(".medpath", {
+  slidesPerView: "auto",
+  spaceBetween: 32,
+  speed: 750,
+  centeredSlides: true,
+});
+
+new Swiper(".tripsSlider", {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".trips-swiper-button-next",
+    prevEl: ".trips-swiper-button-prev",
+  },
+});
+</script>
+<!-- ../components/Home/SliderItems -->
