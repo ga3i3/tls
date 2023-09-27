@@ -5,6 +5,9 @@ import RouteItems from "../components/Home/RouteItems";
 import MedSliderItems from "../components/Home/MedSliderItems";
 import ChooseItems from "../components/Home/ChooseItems";
 import TripSliderItems from "../components/Home/TripSliderItems";
+import ReviewsSliderItems from "../components/Home/ReviewsSliderItems";
+import PositionsSliderItems from "../components/Home/PositionsSliderItems";
+import InstagramItems from "../components/Home/InstagramItems";
 ---
 
 <Layout title="TLC Nursing">
@@ -173,6 +176,63 @@ import TripSliderItems from "../components/Home/TripSliderItems";
       </div>
     </div>
   </div>
+  <div class="reviews">
+    <div class="wrapper">
+      <div class="upheader">
+        <span>Testimonial</span>
+        <h2>What Our Staffs Say</h2>
+      </div>
+
+      <div class="reviews_wrapper">
+        <div class="swiper reviewsSlider">
+          <div class="swiper-wrapper">
+            <ReviewsSliderItems />
+          </div>
+          <div class="reviews-swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="positions">
+    <div class="wrapper">
+      <h2>The latest open positions</h2>
+
+      <div class="search">
+        <input type="text" placeholder="Speciality" />
+        <div class="actions">
+          <span><span class="iconify" data-icon="uil:angle-down"></span></span>
+          <span><span class="iconify" data-icon="uil:search"></span></span>
+        </div>
+      </div>
+
+      <div class="positions_wrapper">
+        <div class="swiper positionsSlider">
+          <div class="swiper-wrapper">
+            <PositionsSliderItems />
+          </div>
+        </div>
+        <button class="positions-swiper-button-prev custom-button-prev">
+          <span class="iconify" data-icon="bi:chevron-left"></span>
+        </button>
+        <button class="positions-swiper-button-next custom-button-next">
+          <span class="iconify" data-icon="bi:chevron-right"></span>
+        </button>
+      </div>
+
+      <div class="action">
+        <a href="/">See all jobs</a>
+      </div>
+    </div>
+  </div>
+  <div class="follow">
+    <div class="wrapper">
+      <h2>FOLLOW ON INSTAGRAM</h2>
+
+      <div class="images">
+        <InstagramItems />
+      </div>
+    </div>
+  </div>
 </Layout>
 
 <script is:inline>
@@ -182,6 +242,7 @@ new Swiper(".banner", {
   speed: 750,
   pagination: {
     el: ".banner-swiper-pagination",
+    clickable: true,
   },
 });
 
@@ -198,6 +259,24 @@ new Swiper(".tripsSlider", {
   navigation: {
     nextEl: ".trips-swiper-button-next",
     prevEl: ".trips-swiper-button-prev",
+  },
+});
+
+new Swiper(".reviewsSlider", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".reviews-swiper-pagination",
+    clickable: true,
+  },
+});
+
+new Swiper(".positionsSlider", {
+  slidesPerView: 4,
+  spaceBetween: 25,
+  navigation: {
+    nextEl: ".positions-swiper-button-next",
+    prevEl: ".positions-swiper-button-prev",
   },
 });
 </script>

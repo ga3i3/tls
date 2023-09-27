@@ -1,6 +1,7 @@
 ---
 import "../assets/styles.scss";
 import Header from "../components/Header.jsx";
+import Footer from "../components/Footer";
 
 interface Props {
   title: string;
@@ -34,7 +35,7 @@ const { title } = Astro.props;
     <main id="content">
       <slot />
     </main>
-
+    <Footer />
     <script src="../inc/iconify.min.js"></script>
     <script src="../inc/swiper-bundle.min.js" is:inline></script>
   </body>
