@@ -45,7 +45,7 @@ export default function Header() {
               <a href="/" className="circle">
                 <img src="/res/user.png" alt="" />
               </a>
-              <a href="/" className="button search">
+              <a href="/" className="button searchIcon">
                 Search  Jobs
               </a>
               <a href="/" className="button sign">
