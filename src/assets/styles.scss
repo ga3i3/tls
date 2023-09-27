@@ -23,6 +23,12 @@ body {
 
 a {
   text-decoration: none;
+  transition: 350ms;
+}
+
+button {
+  transition: 350ms;
+  cursor: pointer;
 }
 
 
@@ -100,7 +106,14 @@ header {
 
           .socials {
             display: flex;
-            gap: 4px
+            gap: 4px;
+
+            svg {
+              cursor: pointer;
+              &:hover {
+                color: $accent;
+              }
+            }
           }
 
           
@@ -153,6 +166,10 @@ header {
         margin-left: auto;
         .circle {
           margin-right: 30px;
+          transition: 350ms;
+          &:hover {
+            opacity: .7;
+          }
         }
 
         .button {
@@ -170,11 +187,21 @@ header {
           margin-left: auto;
           border: 1px solid #15D199;
           color: #15D199;
+
+          &:hover {
+            background-color: #15D199;
+            color: #fff;
+          }
         }
         .sign {
           margin-left: 10px;
           border: 1px solid #4D9FFF;
           color: #4D9FFF;
+
+          &:hover {
+            background-color: $accent;
+            color: #fff;
+          }
         }
       }
     }
@@ -353,6 +380,10 @@ footer {
             font-style: normal;
             font-weight: 600;
             font-family: $main_font;
+
+            &:hover {
+              opacity: .7;
+            }
           }
 
           span {
@@ -504,6 +535,11 @@ footer {
           align-items: center;
           justify-content: center;
           gap: 10px;
+
+          &:hover {
+            background-color: $accent;
+            color: #fff;
+          }
         }
       }
     }
@@ -730,6 +766,11 @@ footer {
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
+
+      &:hover {
+        background-color: $accent;
+        color: #fff;
+      }
     }
   }
 }
@@ -907,6 +948,11 @@ footer {
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
+
+      &:hover {
+        background-color: $accent;
+        color: #fff;
+      }
     }
   }
 }
@@ -989,6 +1035,11 @@ footer {
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
+
+        &:hover {
+        background-color: #15D199;
+        color: #fff;
+      }
       }
     }
   }
@@ -1146,6 +1197,10 @@ footer {
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
+
+      &:hover {
+        opacity: .7;
+      }
     }
   }
 }
@@ -1374,6 +1429,10 @@ footer {
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
+
+      &:hover {
+        opacity: .7;
+      }
     }
   }
 }

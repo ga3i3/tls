@@ -246,12 +246,13 @@ new Swiper(".banner", {
   },
 });
 
-new Swiper(".medpath", {
+const medPath = new Swiper(".medpath", {
   slidesPerView: "auto",
   spaceBetween: 32,
   speed: 750,
   centeredSlides: true,
 });
+medPath.activeIndex = 1;
 
 new Swiper(".tripsSlider", {
   slidesPerView: 4,
